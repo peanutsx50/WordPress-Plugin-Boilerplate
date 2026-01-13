@@ -76,6 +76,8 @@ class PluginSetup
         $this->printHeader();
         $this->askQuestions();
         if (strtolower($this->confirm) === 'yes') {
+            $this->processFiles();
+            $this->cleanup();
             $this->printSuccess();
         } else {
             echo "Setup aborted. Please run the setup again to enter correct details.\n";
@@ -148,6 +150,12 @@ class PluginSetup
         echo "\n";
         $this->confirm = $this->ask('Is this correct? (yes/no)', 'yes');
     }
+
+    //processing files
+    private function processFiles() {}
+
+    // cleanup setup file
+    private function cleanup() {}
 }
 
 $setup = new PluginSetup();
