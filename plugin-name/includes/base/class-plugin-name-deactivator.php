@@ -20,7 +20,11 @@
  * @subpackage Plugin_Name/includes
  * @author     Your Name <email@example.com>
  */
-class Plugin_Name_Deactivator {
+
+namespace PluginName\base;
+
+class Plugin_Name_Deactivator
+{
 
 	/**
 	 * Short Description. (use period)
@@ -29,8 +33,5 @@ class Plugin_Name_Deactivator {
 	 *
 	 * @since    1.0.0
 	 */
-	public static function deactivate() {
-
-	}
-
+	public static function deactivate() {}
 }

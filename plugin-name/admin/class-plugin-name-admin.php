@@ -20,6 +20,9 @@
  * @subpackage Plugin_Name/admin
  * @author     Your Name <email@example.com>
  */
+
+namespace PluginName\admin;
+
 class Plugin_Name_Admin {
 
 	/**

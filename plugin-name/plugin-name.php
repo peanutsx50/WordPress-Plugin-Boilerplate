@@ -19,7 +19,7 @@
  * Version:           1.0.0
  * Author:            Your Name or Your Company
  * Author URI:        http://example.com/
- * License:           GPL-2.0+
+ * License:           GPL-2.0+added simple composer
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       plugin-name
  * Domain Path:       /languages
@@ -47,13 +47,17 @@ define('PLUGIN_NAME_VERSION', '1.0.0');
 define('PLUGIN_NAME_URL', plugin_dir_url(__FILE__));
 define('PLUGIN_NAME_PATH', plugin_dir_path(__FILE__));
 
+// namespace imports
+use PluginName\base\Plugin_Name_Activator;
+use PluginName\base\Plugin_Name_Deactivator;
+use PluginName\base\Plugin_Name;
+
 /**
  * The code that runs during plugin activation.
  * This action is documented in includes/class-plugin-name-activator.php
  */
 function activate_plugin_name()
 {
-	require_once plugin_dir_path(__FILE__) . 'includes/class-plugin-name-activator.php';
 	Plugin_Name_Activator::activate();
 }
 
@@ -63,18 +67,12 @@ function activate_plugin_name()
  */
 function deactivate_plugin_name()
 {
-	require_once plugin_dir_path(__FILE__) . 'includes/class-plugin-name-deactivator.php';
 	Plugin_Name_Deactivator::deactivate();
 }
 
 register_activation_hook(__FILE__, 'activate_plugin_name');
 register_deactivation_hook(__FILE__, 'deactivate_plugin_name');
 
-/**
- * The core plugin class that is used to define internationalization,
- * admin-specific hooks, and public-facing site hooks.
- */
-require plugin_dir_path(__FILE__) . 'includes/class-plugin-name.php';
 
 /**
  * Begins execution of the plugin.
@@ -85,6 +83,7 @@ require plugin_dir_path(__FILE__) . 'includes/class-plugin-name.php';
  *
  * @since    1.0.0
  */
+
 function run_plugin_name()
 {
 

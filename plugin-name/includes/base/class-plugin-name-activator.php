@@ -20,7 +20,11 @@
  * @subpackage Plugin_Name/includes
  * @author     Your Name <email@example.com>
  */
-class Plugin_Name_Activator {
+
+namespace PluginName\base;
+
+class Plugin_Name_Activator
+{
 
 	/**
 	 * Short Description. (use period)
@@ -29,8 +33,5 @@ class Plugin_Name_Activator {
 	 *
 	 * @since    1.0.0
 	 */
-	public static function activate() {
-
-	}
-
+	public static function activate() {}
 }
