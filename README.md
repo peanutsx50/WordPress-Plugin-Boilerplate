@@ -154,4 +154,4 @@ This is a fork of the WordPress Plugin Boilerplate maintained by **Festus Murimi
 
 ## Documentation, FAQs, and More
 
-If you’re interested in writing any documentation or creating tutorials please [let me know](http://devinvinson.com/contact/) .
+If you’re interested in writing any documentation or creating tutorials please [let me know](mailto:murimifestus09@gmail.com) .
