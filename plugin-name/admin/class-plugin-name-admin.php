@@ -23,7 +23,8 @@
 
 namespace PluginName\admin;
 
-class Plugin_Name_Admin {
+class Plugin_Name_Admin
+{
 
 	/**
 	 * The ID of this plugin.
@@ -50,11 +51,11 @@ class Plugin_Name_Admin {
 	 * @param      string    $plugin_name       The name of this plugin.
 	 * @param      string    $version    The version of this plugin.
 	 */
-	public function __construct( $plugin_name, $version ) {
+	public function __construct($plugin_name, $version)
+	{
 
 		$this->plugin_name = $plugin_name;
 		$this->version = $version;
-
 	}
 
 	/**
@@ -62,7 +63,8 @@ class Plugin_Name_Admin {
 	 *
 	 * @since    1.0.0
 	 */
-	public function enqueue_styles() {
+	public function enqueue_styles()
+	{
 
 		/**
 		 * This function is provided for demonstration purposes only.
@@ -76,8 +78,7 @@ class Plugin_Name_Admin {
 		 * class.
 		 */
 
-		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/plugin-name-admin.css', array(), $this->version, 'all' );
-
+		wp_enqueue_style($this->plugin_name, PLUGIN_NAME_URL . 'admin/css/plugin-name-admin.css', array(), (float) $this->version, 'all');
 	}
 
 	/**
@@ -85,7 +86,8 @@ class Plugin_Name_Admin {
 	 *
 	 * @since    1.0.0
 	 */
-	public function enqueue_scripts() {
+	public function enqueue_scripts()
+	{
 
 		/**
 		 * This function is provided for demonstration purposes only.
@@ -99,8 +101,6 @@ class Plugin_Name_Admin {
 		 * class.
 		 */
 
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/plugin-name-admin.js', array( 'jquery' ), $this->version, false );
-
+		wp_enqueue_script($this->plugin_name, PLUGIN_NAME_URL . 'admin/js/plugin-name-admin.js', array('jquery'), (float) $this->version, false);
 	}
-
 }
