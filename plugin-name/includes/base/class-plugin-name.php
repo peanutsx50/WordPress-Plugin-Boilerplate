@@ -33,6 +33,10 @@ namespace PluginName\base;
 use PluginName\admin\Plugin_Name_Admin;
 use PluginName\public\Plugin_Name_Public;
 
+if ( ! defined( 'ABSPATH' ) ) {
+    exit; // Exit if accessed directly.
+}
+
 
 class Plugin_Name
 {
@@ -116,6 +120,8 @@ class Plugin_Name
 	 *
 	 * Uses the Plugin_Name_i18n class in order to set the domain and to register the hook
 	 * with WordPress.
+	 * 
+	 * since wordpress 4.6 loading text domain is not needed, keep it if you want to support older versions of wordpress
 	 *
 	 * @since    1.0.0
 	 * @access   private
@@ -125,7 +131,7 @@ class Plugin_Name
 
 		$plugin_i18n = new Plugin_Name_i18n();
 
-		$this->loader->add_action('plugins_loaded', $plugin_i18n, 'load_plugin_textdomain');
+		$this->loader->add_action('init', $plugin_i18n, 'load_plugin_textdomain');
 	}
 
 	/**

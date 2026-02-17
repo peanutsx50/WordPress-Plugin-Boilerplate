@@ -1,1 +1,4 @@
-<?php //silence is golden
+<?php
+if ( ! defined( 'ABSPATH' ) ) {
+    exit; // Exit if accessed directly.
+}

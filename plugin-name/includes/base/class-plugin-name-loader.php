@@ -24,6 +24,11 @@
 
 namespace PluginName\base;
 
+if ( ! defined( 'ABSPATH' ) ) {
+    exit; // Exit if accessed directly.
+}
+
+
 class Plugin_Name_Loader
 {
 
