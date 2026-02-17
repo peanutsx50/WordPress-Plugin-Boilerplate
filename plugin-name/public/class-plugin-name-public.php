@@ -105,6 +105,6 @@ class Plugin_Name_Public
 		 * class.
 		 */
 
-		wp_enqueue_script($this->plugin_name, PLUGIN_NAME_URL . 'public/js/plugin-name-public.js', array('jquery'), (float) $this->version, false);
+		wp_enqueue_script($this->plugin_name, PLUGIN_NAME_URL . 'public/js/dist/plugin-name-public.min.js', array('jquery'), (float) $this->version, false);
 	}
 }

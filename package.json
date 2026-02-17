@@ -1,0 +1,23 @@
+{
+  "name": "wordpress-plugin-boilerplate",
+  "version": "1.0.0",
+  "description": "A standardized, organized, object-oriented foundation for building high-quality WordPress Plugins.",
+  "homepage": "https://github.com/peanutsx50/WordPress-Plugin-Boilerplate#readme",
+  "bugs": {
+    "url": "https://github.com/peanutsx50/WordPress-Plugin-Boilerplate/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/peanutsx50/WordPress-Plugin-Boilerplate.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "gulp": "^5.0.1"
+  }
+}

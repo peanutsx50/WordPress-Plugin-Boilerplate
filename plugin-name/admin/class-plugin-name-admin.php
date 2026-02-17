@@ -105,6 +105,6 @@ class Plugin_Name_Admin
 		 * class.
 		 */
 
-		wp_enqueue_script($this->plugin_name, PLUGIN_NAME_URL . 'admin/js/plugin-name-admin.js', array('jquery'), (float) $this->version, false);
+		wp_enqueue_script($this->plugin_name, PLUGIN_NAME_URL . 'admin/js/dist/plugin-name-admin.min.js', array('jquery'), (float) $this->version, false);
 	}
 }
